@@ -21,6 +21,7 @@ btnInvia.addEventListener("click", function () {
   const fullPrice = (km * 0.21);
   let voucher = 0;
   let ticketType = ('Biglietto Standard');
+
   //CONTROLLO ETA', ASSEGNO EVENTUALE SCONTO E TIPO TARIFFA BIGLIETTO ("UNDER 18, STANDARD, OVER 65")
   if (age < 18) {
     voucher = (fullPrice * 0.2);
@@ -37,9 +38,14 @@ btnInvia.addEventListener("click", function () {
   console.log(netPrice);
   console.log(ticketType);
 
+  //CREO IL CODICE PRENOTAZIONE PNR RANDOMICO
+  pnr = Math.floor(Math.random() * 99999) + 11111;
+  console.log(pnr);
+
   document.getElementById("my-name").innerHTML = nomeCognome;
   document.getElementById("my-netprice").innerHTML = netPrice.toFixed(2);
   document.getElementById("my-ticket-type").innerHTML = ticketType;
+  document.getElementById("my-pnr").innerHTML = pnr;
 }
 )
 
@@ -47,3 +53,6 @@ btnInvia.addEventListener("click", function () {
 btnAnnulla.addEventListener("click", function () {
   location.reload();
 })
+
+
+

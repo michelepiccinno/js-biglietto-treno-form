@@ -1,3 +1,14 @@
 .bg-primary {
   --bs-primary-rgb: 185, 20, 80;
 }
+
+.bg-secondary {
+  --bs-secondary-rgb: 128, 128, 128;
+}
+
+.btn-primary {
+  --bs-btn-border-color: orange;
+  --bs-btn-bg: #cccccc;
+  --bs-btn-hover-bg: #8b8b8b;
+  --bs-btn-active-bg:#5a5a5a;
+}
