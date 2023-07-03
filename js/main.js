@@ -1,8 +1,10 @@
-let age = 0;
+//DICHIARO LE VARIABILI
+const age = 0;
 let voucher = 0;
 let netPrice = 0;
-let km = 0;
+const km = 0;
 
+//RECUPERO L'ELEMENTO HTML RELATIVO AL SELETTORE INDICATO
 const nomeCognomeInputElement = document.querySelector("[name='nome-cognome']");
 const etaInputElement = document.querySelector("[name='age']");
 const kmInputElement = document.querySelector("[name='km']");
@@ -13,6 +15,7 @@ console.dir(etaInputElement);
 console.dir(kmInputElement);
 console.dir(btnLogin);
 
+//Creo un blocco di codice che viene eseguito solo quando avviene l’evento indicato sul button sul quale ho aggiunto l’eventListener
 btnLogin.addEventListener("click", function () {
   const nomeCognome = nomeCognomeInputElement.value;
   const age = etaInputElement.value;
