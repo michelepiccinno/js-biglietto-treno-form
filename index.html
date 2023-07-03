@@ -18,20 +18,55 @@
 </head>
 
 <body>
-  <main>
-    <div>
-      <label for="name-input" class="form-label">Nome e Cognome: </label>
-      <input type="text" class="form-control" name="nome-cognome" id="name-input">
+  <main class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center text-white">Calcola il prezzo del tuo biglietto</h1>
+        <div class="col text-center">
+          <div class="d-flex justify-content-center p-3 gap-5">
+            <div>
+              <label for="name-input" class="form-label">Nome e Cognome: </label>
+              <input type="text" class="form-control" name="nome-cognome" id="name-input">
+            </div>
+            <div>
+              <label for="km-input" class="form-label">Km da percorrere: </label>
+              <input type="text" class="form-control" name="km" id="km-input">
+            </div>
+            <div>
+              <label for="age-input" class="form-label">Età: </label>
+              <input type="text" class="form-control" name="age" id="age-input">
+            </div>
+          </div>
+          <div class="d-flex justify-content-center p-3 gap-3">
+            <button class="btn btn-primary invia-dati">Genera</button>
+            <button class="btn btn-primary annulla-dati">Annulla</button>
+          </div>
+        </div>
+        <h1 class="text-center text-white">Il tuo biglietto</h1>
+        <div class="col">
+            <h2>Dettaglio passeggeri</h2>
+          <div class="d-flex">
+            <div class="bg-secondary p-3">
+              <h5>Nome Passeggero</h5>
+              <span>Jon Snow</span>
+            </div>
+            <div class="bg-secondary p-3">
+              <h5>Offerta</h5>
+              <span>Biglietto Standard</span>
+            </div>
+            <div class="bg-secondary p-3">
+              <h5>Codice CP</h5>
+              <span>92911</span>
+            </div>
+            <div class="bg-secondary p-3">
+              <h5>Costo Biglietto</h5>
+              <span id="my-netprice"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div>
-      <label for="age-input" class="form-label">Età: </label>
-      <input type="text" class="form-control" name="age" id="age-input">
-    </div>
-    <div>
-      <label for="km-input" class="form-label">Km da percorrere: </label>
-      <input type="text" class="form-control" name="km" id="km-input">
-    </div>
-    <button class="btn btn-primary invia-dati">INVIA</button>
   </main>
   <script src="js/main.js"></script>
 </body>

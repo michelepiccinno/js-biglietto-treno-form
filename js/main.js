@@ -8,15 +8,17 @@ const km = 0;
 const nomeCognomeInputElement = document.querySelector("[name='nome-cognome']");
 const etaInputElement = document.querySelector("[name='age']");
 const kmInputElement = document.querySelector("[name='km']");
-const btnLogin = document.querySelector(".invia-dati");
+const btnInvia = document.querySelector(".invia-dati");
+const btnAnnulla = document.querySelector(".invia-dati");
 
-console.dir(nomeCognomeInputElement);
-console.dir(etaInputElement);
-console.dir(kmInputElement);
-console.dir(btnLogin);
+//console.dir(nomeCognomeInputElement);
+//console.dir(etaInputElement);
+//console.dir(kmInputElement);
+//console.dir(btnInvia);
+//console.dir(btnAnnulla);
 
-//Creo un blocco di codice che viene eseguito solo quando avviene l’evento indicato sul button sul quale ho aggiunto l’eventListener
-btnLogin.addEventListener("click", function () {
+//CREO UN BLOCCO DI CODICE CHE VIENE ESEGUITO SOLO QUANDO AVVIENE L'EVENTO INDICATO SUL BUTTON SUL QUALE HO AGGIUNTO L'EVENTLISTENER 
+btnInvia.addEventListener("click", function () {
   const nomeCognome = nomeCognomeInputElement.value;
   const age = etaInputElement.value;
   const km = kmInputElement.value;
@@ -30,10 +32,12 @@ const fullPrice = (km * 0.21);
   }
   netPrice = (fullPrice - voucher);
 
-  console.log(nomeCognome);
-  console.log(age);
-  console.log(km);
-  console.log(netPrice);
+//  console.log(nomeCognome);
+//  console.log(age);
+//  console.log(km);
+//  console.log(netPrice);
+
+  document.getElementById("my-netprice").innerHTML = netPrice.toFixed(2);
 }
 )
 
