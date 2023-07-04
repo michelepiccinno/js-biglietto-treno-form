@@ -51,7 +51,15 @@ btnInvia.addEventListener("click", function () {
 
 //CREO UN BLOCCO DI CODICE CHE VIENE ESEGUITO SOLO QUANDO AVVIENE IL CLICK SUL BUTTON AZZERA PER AZZERARE I CAMPI
 btnAnnulla.addEventListener("click", function () {
-  location.reload();
+  //location.reload(); EFFETTUA IL RELOAD DELL'INTERA PAGINA
+  //SVUOTO TUTTI I CAMPI AL CLICK DI btnAnnulla
+  nomeCognomeInputElement.value = "";
+  kmInputElement.value = "";
+  etaInputElement.value = "";
+  document.getElementById("my-name").innerHTML = "";
+  document.getElementById("my-ticket-type").innerHTML = "";
+  document.getElementById("my-pnr").innerHTML = "";
+  document.getElementById("my-netprice").innerHTML = "";
 })
 
 
