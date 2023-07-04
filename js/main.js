@@ -39,7 +39,7 @@ btnInvia.addEventListener("click", function () {
   console.log(ticketType);
 
   //CREO IL CODICE PRENOTAZIONE PNR RANDOMICO
-  pnr = Math.floor(Math.random() * 99999) + 11111;
+  const pnr = Math.floor(Math.random() * 99999) + 11111;
   console.log(pnr);
 
   document.getElementById("my-name").innerHTML = nomeCognome;
@@ -55,7 +55,7 @@ btnAnnulla.addEventListener("click", function () {
   //SVUOTO TUTTI I CAMPI AL CLICK DI btnAnnulla
   nomeCognomeInputElement.value = "";
   kmInputElement.value = "";
-  etaInputElement.value = "";
+  etaInputElement.value = "Seleziona Età";
   document.getElementById("my-name").innerHTML = "";
   document.getElementById("my-ticket-type").innerHTML = "";
   document.getElementById("my-pnr").innerHTML = "";
